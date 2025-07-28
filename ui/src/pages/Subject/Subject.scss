@@ -1,0 +1,57 @@
+.subject-container {
+    background: #c7f9cc;
+    min-height: 100vh;
+    padding: 2rem;
+
+    .subject-header {
+        color: #22577a;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .subject-description {
+        color: #38a3a5;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .topics-list {
+        list-style: none;
+        padding: 0;
+
+        .topic-item {
+            background: #80ed99;
+            border-left: 6px solid #57cc99;
+            margin-bottom: 1rem;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            color: #22577a;
+            font-size: 1.1rem;
+            transition: background 0.2s;
+
+            &:hover {
+                background: #57cc99;
+                color: #fff;
+            }
+        }
+    }
+
+    .add-topic-btn {
+        background: #22577a;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 2rem;
+        transition: background 0.2s;
+
+        &:hover {
+            background: #38a3a5;
+        }
+    }
+}

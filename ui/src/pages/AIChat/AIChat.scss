@@ -1,0 +1,110 @@
+$color-primary: #22577a;
+$color-secondary: #38a3a5;
+$color-accent: #57cc99;
+$color-light: #80ed99;
+$color-background: #c7f9cc;
+
+.helper-chat {
+    background: $color-background;
+    color: $color-primary;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    .chat-header {
+        background: $color-primary;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .chat-messages {
+        flex: 1;
+        padding: 1.5rem 2rem;
+        overflow-y: auto;
+        background: $color-light;
+        border-radius: 0 0 12px 12px;
+        box-shadow: 0 2px 8px rgba(34, 87, 122, 0.08);
+    }
+
+    .message {
+        margin-bottom: 1.2rem;
+        display: flex;
+        align-items: flex-end;
+
+        &.user {
+            justify-content: flex-end;
+
+            .bubble {
+                background: $color-accent;
+                color: #fff;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 16px;
+            }
+        }
+
+        &.helper {
+            justify-content: flex-start;
+
+            .bubble {
+                background: $color-secondary;
+                color: #fff;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 16px;
+            }
+        }
+
+        .bubble {
+           
+            padding: 0.75rem 1.2rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            box-shadow: 0 1px 4px rgba(56, 163, 165, 0.10);
+            transition: background 0.2s;
+        }
+    }
+
+    .chat-input-area {
+        display: flex;
+        padding: 1rem 2rem;
+        background: $color-background;
+        border-top: 1px solid $color-light;
+
+        input[type="text"] {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            border: 1px solid $color-accent;
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+            margin-right: 1rem;
+            background: #fff;
+            color: $color-primary;
+            transition: border 0.2s;
+
+            &:focus {
+                border-color: $color-secondary;
+            }
+        }
+
+        button {
+            background: $color-primary;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+
+            &:hover {
+                background: $color-secondary;
+            }
+        }
+    }
+}

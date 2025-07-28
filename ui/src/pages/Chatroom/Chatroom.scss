@@ -1,0 +1,104 @@
+/* Chatroom.scss */
+/* Color palette */
+$dark-green: #22577a;
+$teal: #38a3a5;
+$mint: #57cc99;
+$light-mint: #80ed99;
+$very-light-mint: #c7f9cc;
+$white: #fff;
+$black: #000;
+
+/* Example color variables based on common chatroom UIs */
+$background-color: #f5f5f7;
+$message-bg: #ffffff;
+$message-bg-user: #e6f7ff;
+$text-color: #222;
+$text-color-user: #007aff;
+$border-color: #e0e0e0;
+$input-bg: #fff;
+$input-border: #ccc;
+$button-bg: #007aff;
+$button-color: #fff;
+$button-hover-bg: #005bb5;
+
+.chatroom-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: $background-color;
+    padding: 0;
+}
+
+.chatroom-header {
+    padding: 1rem;
+    background: $message-bg;
+    border-bottom: 1px solid $border-color;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: $text-color;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.message {
+  
+    padding: 0.75rem 1rem;
+    border-radius: 1.25rem;
+    background: $message-bg;
+    color: $text-color;
+    align-self: flex-start;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.message.user {
+    background: $message-bg-user;
+    color: $text-color-user;
+    align-self: flex-end;
+}
+
+.chatroom-input-area {
+    display: flex;
+    padding: 1rem;
+    background: $message-bg;
+    border-top: 1px solid $border-color;
+}
+
+.chatroom-input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid $input-border;
+    border-radius: 2rem;
+    background: $input-bg;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    outline: none;
+}
+
+.chatroom-send-btn {
+    background: $button-bg;
+    color: $button-color;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    &:hover {
+        background: $button-hover-bg;
+    }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
